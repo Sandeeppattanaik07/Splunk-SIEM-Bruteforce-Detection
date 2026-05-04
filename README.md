@@ -22,7 +22,6 @@ Logs are collected from an Ubuntu system and analyzed to identify multiple faile
 ### 1️⃣ Target System Setup
 
 <img src="screenshots/1_target_ip.png" width="700">
-
 ---
 
 ### 2️⃣ SSH Service Running
@@ -63,6 +62,7 @@ Logs are collected from an Ubuntu system and analyzed to identify multiple faile
 ### 9️⃣ Successful Login Detection
 
 <img src="screenshots/9_successful_login.png" width="700">
+
 ---
 
 ## 🔍 Splunk Query Used
