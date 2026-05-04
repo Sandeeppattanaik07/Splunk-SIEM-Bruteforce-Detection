@@ -27,50 +27,42 @@ Logs are collected from an Ubuntu system and analyzed to identify multiple faile
 
 ### 2️⃣ SSH Service Running
 
-![SSH Running](screenshots/2_ssh_running.png)
-
+<img src="screenshots/2_ssh_running.png" width="700">
 ---
 
 ### 3️⃣ SSH Login Attempt
 
-![SSH Login](screenshots/3_ssh_login.png)
-
+<img src="screenshots/3_ssh_login.png" width="700">
 ---
 
 ### 4️⃣ Brute Force Attack using Hydra
 
-![Hydra Attack](screenshots/4_hydra_attack.png)
-
+<img src="screenshots/4_hydra_attack.png" width="700">
 ---
 
 ### 5️⃣ Splunk Setup
 
-![Splunk Setup](screenshots/5_splunk_setup.png)
-
+<img src="screenshots/5_splunk_setup.png" width="700">
 ---
 
 ### 6️⃣ Data Ingestion (auth logs)
 
-![Data Ingestion](screenshots/6_data_ingestion.png)
-
+<img src="screenshots/6_data_ingestion.png" width="700">
 ---
 
 ### 7️⃣ Failed Login Detection
 
-![Failed Logins](screenshots/7_failed_logins.png)
-
+<img src="screenshots/7_failed_logins.png" width="700">
 ---
 
 ### 8️⃣ Attacker IP Identification
 
-![Attacker IP](screenshots/8_attacker_ip.png)
-
+<img src="screenshots/8_attacker_ip.png" width="700">
 ---
 
 ### 9️⃣ Successful Login Detection
 
-![Successful Login](screenshots/9_successful_login.png)
-
+<img src="screenshots/9_successful_login.png" width="700">
 ---
 
 ## 🔍 Splunk Query Used
