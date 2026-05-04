@@ -21,7 +21,7 @@ Logs are collected from an Ubuntu system and analyzed to identify multiple faile
 
 ### 1️⃣ Target System Setup
 
-![Target IP](screenshots/1_target_ip.png)
+<img src="screenshots/1_target_ip.png" width="700">
 
 ---
 
