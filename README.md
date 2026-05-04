@@ -1,81 +1,108 @@
-Splunk SIEM Lab – Brute Force Attack Detection
+# 🔐 Splunk SIEM – Brute Force Attack Detection
 
-Overview
+## 📌 Project Overview
 
-This project demonstrates detection of an SSH brute-force attack using Splunk SIEM. Logs were collected from a Linux system and analyzed to identify failed login attempts and attacker behavior.
-
----
-
-Tools Used
-
-* Kali Linux (Attacker)
-* Ubuntu (Target System)
-* Splunk Enterprise
-* Hydra
-* VMware Workstation
+This project demonstrates how a **brute force SSH attack** can be detected using **Splunk SIEM**.
+Logs are collected from an Ubuntu system and analyzed to identify multiple failed login attempts and attacker activity.
 
 ---
 
-Lab Setup
+## 🛠️ Tools & Technologies
 
-* SSH enabled on Ubuntu machine
-* Kali Linux used to perform brute-force attack
-* Logs collected from `/var/log/auth.log`
-* Logs ingested into Splunk for analysis
-
----
-
-Attack Simulation
-
-A brute-force SSH attack was performed using Hydra:
-
-```
-hydra -l sandeep-pattanaik -P passwords.txt ssh://192.168.x.x
-```
+* Splunk Enterprise (SIEM)
+* Ubuntu Linux (Target Machine)
+* Kali Linux (Attacker Machine)
+* Hydra (Brute Force Tool)
+* SSH Logs (`auth.log`)
 
 ---
 
-Detection in Splunk
+## ⚙️ Project Workflow
 
-  Failed Login Detection
+### 1️⃣ Target System Setup
 
-```
-index=main sourcetype=auth_logs "Failed password"
-```
+![Target IP](screenshots/1_target_ip.png)
 
-  Attacker IP Identification
+---
 
-```
+### 2️⃣ SSH Service Running
+
+![SSH Running](screenshots/2_ssh_running.png)
+
+---
+
+### 3️⃣ SSH Login Attempt
+
+![SSH Login](screenshots/3_ssh_login.png)
+
+---
+
+### 4️⃣ Brute Force Attack using Hydra
+
+![Hydra Attack](screenshots/4_hydra_attack.png)
+
+---
+
+### 5️⃣ Splunk Setup
+
+![Splunk Setup](screenshots/5_splunk_setup.png)
+
+---
+
+### 6️⃣ Data Ingestion (auth logs)
+
+![Data Ingestion](screenshots/6_data_ingestion.png)
+
+---
+
+### 7️⃣ Failed Login Detection
+
+![Failed Logins](screenshots/7_failed_logins.png)
+
+---
+
+### 8️⃣ Attacker IP Identification
+
+![Attacker IP](screenshots/8_attacker_ip.png)
+
+---
+
+### 9️⃣ Successful Login Detection
+
+![Successful Login](screenshots/9_successful_login.png)
+
+---
+
+## 🔍 Splunk Query Used
+
+```spl
 index=main sourcetype=auth_logs "Failed password"
 | rex "from (?<src>\d+\.\d+\.\d+\.\d+)"
 | stats count by src
 ```
 
-   Successful Login Detection
+---
 
-```
-index=main sourcetype=auth_logs "Accepted password"
-```
+## 🚨 Detection Logic
+
+* Multiple failed login attempts from same IP
+* Extraction of attacker IP using `rex`
+* Aggregation using `stats count`
+* Identification of brute force pattern
 
 ---
 
-Results
+## 🎯 Key Learnings
 
-* Multiple failed login attempts detected
-* Attacker IP identified: 192.168.142.128
-* Successful login observed after brute-force attack
-
----
-
-Conclusion
-
-This project demonstrates how Splunk SIEM can detect brute-force attacks by analyzing authentication logs and identifying suspicious patterns.
+* Log analysis using Splunk
+* Detection of brute force attacks
+* Understanding SSH authentication logs
+* Creating SIEM detection queries
 
 ---
 
-Skills Demonstrated
+## 📌 Conclusion
 
-* SIEM (Splunk)
-* Log Analysis
-* Cyber Attack Simulation
-* Incident Detection
+This project showcases how SIEM tools like Splunk can effectively detect brute force attacks by analyzing authentication logs and identifying suspicious patterns.
+
+---
