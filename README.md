@@ -93,6 +93,11 @@ index=main sourcetype=auth_logs "Failed password"
 
 ---
 
+## 🔗 Related Project
+
+👉 [Cyber Security Maturity Assessment (NALCO)](https://github.com/Sandeeppattanaik07/Cyber-Security-Maturity-Assessment-NALCO)
+
+---
 ## 📌 Conclusion
 
 This project showcases how SIEM tools like Splunk can effectively detect brute force attacks by analyzing authentication logs and identifying suspicious patterns.
